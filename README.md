@@ -13,8 +13,6 @@ This tool uses Streamlit for interacting with the threat intel data.
 ##  Dependencies
 search_keyword_streamlit.py requires the following dependencies:
 
-pypi_streamlit.py requires the following dependencies:
-
 - [streamlit](https://pypi.org/project/streamlit/)
   - `pip install streamlit`
 - [pandas](https://pypi.org/project/pandas/)
