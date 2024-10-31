@@ -25,7 +25,7 @@ pypi_streamlit.py requires the following dependencies:
 1. git clone repo:
 
 ```
-git clone https://github.com/adamcysec/CSAPP.git
+git clone https://github.com/adamcysec/ThreatIntel-Reports.git
 ```
 
 3. Pip install any missing dependencies 
