@@ -1,11 +1,46 @@
 # ThreatIntel-Reports
 
+A fork of [ThreatIntel-Reports](https://github.com/mthcht/ThreatIntel-Reports) from [mthcht](https://x.com/mthcht).
+
 A repository of extracted content from thousands of threat intelligence reports, with an automatic extraction of reports from various feeds !
+
+## What's New?!
+
+This fork uses multi-threading to read all 9,000+ reports very fast.
+
+This tool uses Streamlit for interacting with the threat intel data.
+
+##  Dependencies
+search_keyword_streamlit.py requires the following dependencies:
+
+pypi_streamlit.py requires the following dependencies:
+
+- [streamlit](https://pypi.org/project/streamlit/)
+  - `pip install streamlit`
+- [pandas](https://pypi.org/project/pandas/)
+  - `pip install pandas` 
+
+## Installation
+
+1. git clone repo:
+
+```
+git clone https://github.com/adamcysec/CSAPP.git
+```
+
+3. Pip install any missing dependencies 
 
 ## Usage
 
-  - **Search by Keyword on the [site](https://mthcht.github.io/ThreatIntel-Reports/)** : Use the search bar to explore predefined search results. (Currently expanding to cover over 2000 tools and some APT Groups. Let me know if you’d like a specific keyword added by default !)
+Run 
 
- ![17301644842372447845239574900293](https://github.com/user-attachments/assets/9aedcd91-ec03-4df6-b167-eab53ad0e153)
+```
+streamlit run search_keyword_streamlit.py
+```
 
-  - **Search by Keyword in CLI**: Clone the repository and execute one the `search_keywords*.py` script. The scripts will prompt you to enter one or multiple keywords separated by commas. It will search for the keywords in all the available reports and save the results in a JSON file that can be integrated into the site if desired (to be searchable on the UI).
+Note: if you have more than one version of python installed you may need to run streamlit like so:
+
+```
+python3 -m streamlit run search_keyword_streamlit.py
+```
+
