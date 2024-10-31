@@ -3,7 +3,6 @@ import textwrap
 import glob
 from multiprocessing import Pool
 from contextlib import ExitStack
-from timeit import default_timer as timer
 import platform
 
 def get_args():
