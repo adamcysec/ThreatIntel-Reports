@@ -7,7 +7,7 @@ import platform
 
 def get_args():
     parser = argparse.ArgumentParser(
-        description="keyword search through 36,092 threat intel reports",
+        description="keyword search through 10,402 threat intel reports",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=textwrap.dedent('''Examples:
         search_keyword_mt.py "sharpchromium"
