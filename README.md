@@ -4,6 +4,8 @@ A fork of [ThreatIntel-Reports](https://github.com/mthcht/ThreatIntel-Reports) f
 
 A repository of extracted content from thousands of threat intelligence reports, with an automatic extraction of reports from various feeds !
 
+Be sure to download the most up to date Intel Reports directory from [ThreatIntel-Reports](https://github.com/mthcht/ThreatIntel-Reports)
+
 ## What's New?!
 
 This fork uses multi-threading to read all 10,402+ reports very fast.
