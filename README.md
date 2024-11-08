@@ -6,7 +6,7 @@ A repository of extracted content from thousands of threat intelligence reports,
 
 ## What's New?!
 
-This fork uses multi-threading to read all 9,000+ reports very fast.
+This fork uses multi-threading to read all 10,402+ reports very fast.
 
 This tool uses Streamlit for interacting with the threat intel data.
 
