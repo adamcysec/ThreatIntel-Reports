@@ -84,7 +84,10 @@ def search_file(files, keywords):
                 # read link file
                 with open(link_path, 'r', encoding="utf-8", errors='ignore') as link_file:
                     line = link_file.read()
-                link = line.split('](')[-1].strip()[:-1]
+                
+                link = line.split('](')[-1].strip()
+                if link[-1] == ')':
+                    link = link[:-1]
                 
                 results.append([files[i], link, line_hits])
     
