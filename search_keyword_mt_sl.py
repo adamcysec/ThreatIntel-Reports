@@ -4,10 +4,11 @@ import glob
 from multiprocessing import Pool
 from contextlib import ExitStack
 import platform
+import json
 
 def get_args():
     parser = argparse.ArgumentParser(
-        description="keyword search through 10,402 threat intel reports",
+        description="keyword search through 36,092 threat intel reports",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=textwrap.dedent('''Examples:
         search_keyword_mt.py "sharpchromium"
@@ -81,13 +82,17 @@ def search_file(files, keywords):
             if len(line_hits):
                 link_path = files[i].replace('content.txt','link.md')
                 
-                # read link file
-                with open(link_path, 'r', encoding="utf-8", errors='ignore') as link_file:
-                    line = link_file.read()
+                try:
+                    # read link file
+                    with open(link_path, 'r', encoding="utf-8", errors='ignore') as link_file:
+                        line = link_file.read()
+                except:
+                    link = "link file not found"
                 
                 link = line.split('](')[-1].strip()
                 if link[-1] == ')':
                     link = link[:-1]
+
                 
                 results.append([files[i], link, line_hits])
     
@@ -123,7 +128,7 @@ def format_data_for_dataframe(results):
 
                 total_keyword_hits += 1
 
-            data.append([report_url, keyword, total_keyword_hits])
+            data.append([report_url, keyword, total_keyword_hits, f"'{file_path}'"])
     
     return data
 
@@ -153,7 +158,8 @@ def main():
     
     results = [item for item in results if item]
     streamlit_data = format_data_for_dataframe(results)
-    print(streamlit_data)
+    #print(streamlit_data)
+    print(json.dumps(streamlit_data))
 
 if __name__ == "__main__":
     main()
